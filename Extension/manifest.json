@@ -1,0 +1,17 @@
+{
+    "name": "CloseAfterPrint",
+    "manifest_version": 3,
+    "version": "1.0.0",
+    "background":{
+      "service_worker":"background.js"
+    },
+    "action": {
+        "default_popup": "Index.html"},
+    "permissions": ["tabs","nativeMessaging"],
+    "content_scripts":[
+      {
+         "js": ["popup.js"],
+          "matches": ["<all_urls>"]
+     }
+     ]
+  }
